@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { RiArrowRightSLine } from 'react-icons/ri'
 import { MdDashboard } from 'react-icons/md'
 import { MdSupportAgent } from "react-icons/md";
-import AccountDiv from './accountDiv';
 
 function Sidebar({show}) {
     const [current,setCurrent] = useState(1)
