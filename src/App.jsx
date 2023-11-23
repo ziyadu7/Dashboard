@@ -8,6 +8,8 @@ import { MdMailOutline} from 'react-icons/md'
 import {  RiCheckDoubleLine} from 'react-icons/ri'
 import AccountDiv from './components/accountDiv'
 import { FaBars } from "react-icons/fa";
+import { IoIosNotifications } from "react-icons/io";
+import { FaPlus } from "react-icons/fa6";
 
 function App() {
 
@@ -123,6 +125,14 @@ function App() {
         <div className='grid grid-cols-1 overflow-hidden lg:grid-cols-2 sm:gap-12 sm:ps-20 sm:pe-20'>
           {offers.map(offers=> <BottomCard offers={offers}/>)}
         </div>
+      </div>
+      <div className='h-screen'>
+            <div className='fixed '>
+                  <p className='absolute -right-24 bg-white text-4xl rounded-sm'><IoIosNotifications className='text-blue-500'/></p>
+            </div>
+            <div className='fixed '>
+                  <p className='absolute rounded-full bg-sky-400 -right-24 top-96 text-4xl'><FaPlus className='text-blue-500'/></p>
+            </div>
       </div>
     </div>
    </div>

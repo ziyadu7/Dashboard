@@ -7,7 +7,7 @@ function Sidebar({show}) {
     const [current,setCurrent] = useState(1)
     return (
         <div className={`${
-            show ? 'translate-x-0 opacity-100 ' : '-translate-x-full sm:translate-x-0 sm:opacity-100 opacity-0'
+            show ? 'translate-x-0 opacity-100 ' : '-translate-x-full md:translate-x-0 md:opacity-100 opacity-0'
           } w-60 md:w-64 bg-white h-screen shadow-md fixed sm:top-100 left-0 z-40 transition-all duration-300 ease-in-out`}>
             <div className="flex flex-col p-3 shadow w-60">
                 <div className="space-y-3">
