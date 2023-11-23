@@ -6,8 +6,12 @@ import {GoPerson} from 'react-icons/go'
 import {TiCloudStorageOutline} from 'react-icons/ti'
 import { MdMailOutline} from 'react-icons/md'
 import {  RiCheckDoubleLine} from 'react-icons/ri'
+import AccountDiv from './components/accountDiv'
+import { FaBars } from "react-icons/fa";
 
 function App() {
+
+  const [show,setShow] = useState(false)
 
   const plans = [
     {
@@ -94,17 +98,23 @@ function App() {
   return (
    <>
    <div className='bg-sky-100 h-full'>
+    <div onClick={()=>setShow(true)} className='md:hidden hover:cursor-pointer blcok start-4 top-5 fixed'>
+      <FaBars className='text-xl'/>
+    </div>
+    <div className='sm:flex hidden'>
     <div className='md:h-36'>
-      <div className='md:w-96 w-screen md:fixed'>
+      <div className='md:w-96 md:fixed'>
         <img src="https://thumbs.dreamstime.com/b/rgb-276621239.jpg" className='md:w-60 w-full h-44' alt="" />
       </div>
     </div>
+   <AccountDiv/>
+    </div>
     <div className='flex'>
       <div className='md:w-52 '>
-       <Sidebar/>
+       <Sidebar show={show} setShow={setShow} />
       </div>
       <div className='bg-white w-full md:w-4/5'>
-        <div className='overflow-hidden sm:p-10 sm:ps-20'>
+        <div className='overflow-hidden p-10 sm:ps-20'>
         <h1 className='font-semibold overflow-hidden text-2xl'>Coose a plan that's just right for you!</h1>
         </div>
         <div className='grid lg:grid-cols-3 overflow-hidden grid-cols-1 gap-6 md:mb-20 m-auto md:ps-20 md:pe-20 md:w-full'>

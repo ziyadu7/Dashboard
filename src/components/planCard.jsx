@@ -2,7 +2,6 @@ import React from 'react'
 import { IoMdArrowDropright} from 'react-icons/io'
 
 function PlanCard({ plan }) {
-    console.log(plan);
     return (
         <div className="p-6 bg-white border drop-shadow-2xl border-gray-200 overflow-hidden rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{plan?.plan}</h5>

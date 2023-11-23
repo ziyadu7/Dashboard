@@ -2,11 +2,12 @@ import React, { useState } from 'react'
 import { RiArrowRightSLine } from 'react-icons/ri'
 import { MdDashboard } from 'react-icons/md'
 import { MdSupportAgent } from "react-icons/md";
+import AccountDiv from './accountDiv';
 
-function Sidebar() {
+function Sidebar({show}) {
     const [current,setCurrent] = useState(1)
     return (
-        <div className='md:block hidden bg-white h-screen shadow drop-shadow-2xl w-fit fixed'>
+        <div className={`md:block ${show?'block':"hidden"} hidden bg-white h-screen shadow drop-shadow-2xl w-fit fixed`}>
             <div className="flex flex-col p-3 shadow w-60">
                 <div className="space-y-3">
                     <div className=" items-center drop-shadow-2xl shadow pb-5">
@@ -54,7 +55,7 @@ function Sidebar() {
                                     className="flex items-center p-2 space-x-3 rounded-md"
                                 >
                                     <MdSupportAgent className='text-lg' />
-                                    <p className='text-lg font-medium'>Orders</p>
+                                    <p className='text-lg font-medium'>FAQ</p>
                                 </p>
                             </li>
                             <li onClick={()=>setCurrent(4)} className={`rounded-md ${current==4?'shadow-md drop-shadow-2xl bg-sky-500':''}`}>
@@ -68,7 +69,7 @@ function Sidebar() {
                                         viewBox="0 0 24 24"
                                         stroke="currentColor"
                                         strokeWidth={2}
-                                    >
+                                        >
                                         <path
                                             strokeLinecap="round"
                                             strokeLinejoin="round"
@@ -88,6 +89,7 @@ function Sidebar() {
                 </div>
             </div>
            <div>
+            
            <p
                 className="flex items-center p-2 space-x-3 rounded-md"
             >
