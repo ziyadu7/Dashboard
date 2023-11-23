@@ -3,7 +3,7 @@ import { IoMdArrowDropright} from 'react-icons/io'
 
 function PlanCard({ plan }) {
     return (
-        <div className="p-6 bg-white border drop-shadow-2xl border-gray-200 overflow-hidden rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <div className="p-6 bg-white border hover:cursor-pointer drop-shadow-2xl border-gray-200 overflow-hidden rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{plan?.plan}</h5>
             <p className='text-slate-600 line-through'>${plan?.price}/mo</p>
             <p className='text-slate-600 text-xl font-medium'>${plan?.discPrice}/mo</p>

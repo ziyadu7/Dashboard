@@ -7,7 +7,9 @@ import AccountDiv from './accountDiv';
 function Sidebar({show}) {
     const [current,setCurrent] = useState(1)
     return (
-        <div className={`md:block ${show?'block':"hidden"} hidden bg-white h-screen shadow drop-shadow-2xl w-fit fixed`}>
+        <div className={`${
+            show ? 'translate-x-0 opacity-100 ' : '-translate-x-full sm:translate-x-0 sm:opacity-100 opacity-0'
+          } w-60 md:w-64 bg-white h-screen shadow-md fixed sm:top-100 left-0 z-40 transition-all duration-300 ease-in-out`}>
             <div className="flex flex-col p-3 shadow w-60">
                 <div className="space-y-3">
                     <div className=" items-center drop-shadow-2xl shadow pb-5">
@@ -21,7 +23,7 @@ function Sidebar({show}) {
                     </div>
                     <div className="flex-1">
                         <ul className="pt-2 pb-4 space-y-1 text-sm">
-                            <li onClick={()=>setCurrent(1)} className={`rounded-md ${current==1?'shadow-md drop-shadow-2xl bg-sky-500':''}`}>
+                            <li onClick={()=>setCurrent(1)} className={`rounded-md hover:cursor-pointer ${current==1?'shadow-md drop-shadow-2xl bg-sky-500':''}`}>
                                 <p
                                     className="flex items-center p-2 space-x-3 rounded-md"
                                 >
@@ -29,7 +31,7 @@ function Sidebar({show}) {
                                     <p className='text-lg font-medium'>Dashboard</p>
                                 </p>
                             </li>
-                            <li onClick={()=>setCurrent(2)} className={`rounded-md ${current==2?'shadow-md drop-shadow-2xl bg-sky-500':''}`}>
+                            <li onClick={()=>setCurrent(2)} className={`rounded-md hover:cursor-pointer ${current==2?'shadow-md drop-shadow-2xl bg-sky-500':''}`}>
                                 <p
                                     className="flex items-center p-2 space-x-3 rounded-md"
                                 >
@@ -50,7 +52,7 @@ function Sidebar({show}) {
                                     <p className='text-lg font-medium'>Perks</p>
                                 </p>
                             </li>
-                            <li onClick={()=>setCurrent(3)} className={`rounded-md ${current==3?'shadow-md drop-shadow-2xl bg-sky-500':''}`}>
+                            <li onClick={()=>setCurrent(3)} className={`rounded-md hover:cursor-pointer ${current==3?'shadow-md drop-shadow-2xl bg-sky-500':''}`}>
                                 <p
                                     className="flex items-center p-2 space-x-3 rounded-md"
                                 >
@@ -58,7 +60,7 @@ function Sidebar({show}) {
                                     <p className='text-lg font-medium'>FAQ</p>
                                 </p>
                             </li>
-                            <li onClick={()=>setCurrent(4)} className={`rounded-md ${current==4?'shadow-md drop-shadow-2xl bg-sky-500':''}`}>
+                            <li onClick={()=>setCurrent(4)} className={`rounded-md hover:cursor-pointer ${current==4?'shadow-md drop-shadow-2xl bg-sky-500':''}`}>
                                 <p
                                     className="flex items-center p-2 space-x-3 rounded-md"
                                 >
@@ -91,7 +93,7 @@ function Sidebar({show}) {
            <div>
             
            <p
-                className="flex items-center p-2 space-x-3 rounded-md"
+                className="flex items-center p-2 space-x-3 rounded-md hover:cursor-pointer"
             >
                 <svg
                     xmlns="http://www.w3.org/2000/svg"

@@ -2,7 +2,7 @@ import React from 'react'
 
 function BottomCard({ offers }) {
     return (
-        <div className="p-6 sm:flex bg-white border drop-shadow-2xl border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <div className="p-6 sm:flex bg-white hover:cursor-pointer border drop-shadow-2xl border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
             <div className='w-1/2'>
                 <p className={`bg-${offers?.color} w-20 text-center rounded-md font-thin text-xs px-1`}>{offers?.minHead}</p>
                 <h1 className='font-bold text-2xl'>{offers?.head}</h1>

@@ -98,7 +98,7 @@ function App() {
   return (
    <>
    <div className='bg-sky-100 h-full'>
-    <div onClick={()=>setShow(true)} className='md:hidden hover:cursor-pointer blcok start-4 top-5 fixed'>
+    <div onClick={()=>setShow(!show)} className='md:hidden fixed z-50 hover:cursor-pointer start-4 top-5'>
       <FaBars className='text-xl'/>
     </div>
     <div className='sm:flex hidden'>
