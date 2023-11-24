@@ -4,7 +4,7 @@ function BottomCard({ offers }) {
     return (
         <div className="p-6 sm:flex bg-white hover:cursor-pointer border drop-shadow-2xl border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
             <div className='w-1/2'>
-                <p className={`bg-${offers?.color||'bg-sky-400'} w-20 text-center rounded-md font-thin text-xs px-1`}>{offers?.minHead}</p>
+                <p className={`bg-${offers?.color||'bg-green-500'||'bg-sky-400'} w-20 text-center rounded-md font-thin text-xs px-1`}>{offers?.minHead}</p>
                 <h1 className='font-bold text-2xl'>{offers?.head}</h1>
                 <p>{offers?.description}</p>
                 <button className={`flex bg-${offers?.color||'bg-sky-400'} mt-4 items-center px-4 py-1 rounded-md text-sm font-medium text-center`}>{offers?.buttonText} <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">

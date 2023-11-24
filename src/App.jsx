@@ -116,8 +116,9 @@ function App() {
        <Sidebar show={show} setShow={setShow} />
       </div>
       <div className='bg-white w-full md:w-4/5'>
-        <div className='overflow-hidden p-10 sm:ps-20'>
+        <div className='overflow-hidden p-10 flex justify-between md:pe-20 sm:ps-20'>
         <h1 className='font-semibold overflow-hidden text-2xl'>Coose a plan that's just right for you!</h1>
+        <p className='border-2 border-black rounded-3xl flex gap-2 px-2 py-1 bg-white'><p className='bg-sky-200 py-1 px-3 rounded-2xl'>Monthly</p><p></p>Annually</p>
         </div>
         <div className='grid lg:grid-cols-3 overflow-hidden grid-cols-1 gap-6 md:mb-20 m-auto md:ps-20 md:pe-20 md:w-full'>
           {plans.map(plan=><PlanCard plan={plan}/>)}
